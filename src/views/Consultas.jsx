@@ -9,7 +9,7 @@ const Consultas = () => {
     }, []);
 
     const cargarConsultas = async () => {
-        const { data } = await clienteAxios('/reporte');
+        const { data } = await clienteAxios('api/reporte');
         setRegistros(data);
     };
 
