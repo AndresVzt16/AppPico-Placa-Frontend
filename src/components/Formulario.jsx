@@ -32,7 +32,7 @@ const Formulario = ({ placa, setPlaca, tipo }) => {
         }
     
         try {
-            const { data } = await clienteAxios.post('/reporte/consulta', {placa, fecha, hora});
+            const { data } = await clienteAxios.post('api/reporte/consulta', {placa, fecha, hora});
             const { reporteGenerado } = data;
             if (reporteGenerado.restringido) {
                 return setAlerta({msg: "El vehiculo no puede circular", error: true});
